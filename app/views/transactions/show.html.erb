@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @transaction.amount %>
+</p>
+
+<p>
+  <strong>Exchange date:</strong>
+  <%= @transaction.exchange_date %>
+</p>
+
+<p>
+  <strong>Credit or debit:</strong>
+  <%= @transaction.credit_or_debit %>
+</p>
+
+<p>
+  <strong>Paid to:</strong>
+  <%= @transaction.paid_to %>
+</p>
+
+<%= link_to 'Edit', edit_transaction_path(@transaction) %> |
+<%= link_to 'Back', transactions_path %>
