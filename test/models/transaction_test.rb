@@ -5,7 +5,11 @@ class TransactionTest < ActiveSupport::TestCase
     assert true
   end
 
-  test "get wallet balance" do
+  test "wallet balance" do
     assert_equal 20.00, Transaction.balance
+  end
+
+  test "total transactions" do
+    assert_equal 2, Transaction.total_transactions    
   end
 end
