@@ -52,8 +52,8 @@ class Transaction < ActiveRecord::Base
     all_expenses.max
   end
 
-  def self.place_most_spent
-    
-  end
+  # def self.place_most_spent
+  #   most_spent = Transactions.where(credit_or_debit: "debit").group(:paid_to).order('sum_amount DESC').sum(:amount).first
+  # end
 
 end

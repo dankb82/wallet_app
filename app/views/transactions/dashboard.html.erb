@@ -9,6 +9,8 @@
 <p>You're biggest expense this month was <%= number_to_currency(@biggest_current) %></p>
 <p>You're biggest expense ever was <%= number_to_currency(@biggest_expense) %></p>
 
+<!-- <p> <% @most_spent %></p> -->
+
 <%= link_to "Transactions list", transactions_path %>
 
 <%= link_to 'New Transaction', new_transaction_path %>
