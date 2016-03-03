@@ -3,6 +3,12 @@ class TransactionsController < ApplicationController
 
   # GET /transactions
   # GET /transactions.json
+
+  def dashboard
+    @balance = Transaction.balance
+    @transaction_total = Transaction.total_transactions
+  end
+
   def index
     @transactions = Transaction.all
   end

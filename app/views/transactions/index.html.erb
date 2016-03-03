@@ -16,7 +16,7 @@
   <tbody>
     <% @transactions.each do |transaction| %>
       <tr>
-        <td><%= transaction.amount %></td>
+        <td><%= number_to_currency(transaction.amount) %></td>
         <td><%= transaction.exchange_date %></td>
         <td><%= transaction.credit_or_debit %></td>
         <td><%= transaction.paid_to %></td>
