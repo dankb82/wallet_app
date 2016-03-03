@@ -7,6 +7,7 @@ class TransactionsController < ApplicationController
   def dashboard
     @balance = Transaction.balance
     @transaction_total = Transaction.total_transactions
+    @current_month = Transaction.current_month_spending
   end
 
   def index
