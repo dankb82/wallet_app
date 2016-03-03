@@ -11,3 +11,9 @@ two:
   exchange_date: 2016-03-02
   credit_or_debit: "debit"
   paid_to: MyString
+
+three:
+  amount: 0.00
+  exchange_date: 2016-02-02
+  credit_or_debit: "debit"
+  paid_to: MyString

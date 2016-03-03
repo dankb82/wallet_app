@@ -8,7 +8,8 @@ class TransactionsController < ApplicationController
     @balance = Transaction.balance
     @transaction_total = Transaction.total_transactions
     @current_month = Transaction.current_month_spending
-    @month_transactions = Transaction.transactions_for_month
+    @this_month_transactions = Transaction.transactions_for_month
+    @last_month_transactions = Transaction.transactions_last_month
   end
 
   def index

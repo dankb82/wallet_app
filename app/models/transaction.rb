@@ -25,13 +25,13 @@ class Transaction < ActiveRecord::Base
   end
 
   def self.transactions_for_month
-    transactions = []
-    self.all.each do |i|
-      if i.exchange_date.mon == Time.now.mon
-        transactions << i
-      end
-    end
-    transactions.count
+    total = self.all.select {|i| i.exchange_date.mon == Time.now.mon}
+    total.length
+  end
+
+  def self.transactions_last_month
+    total = self.all.select {|i| (i.exchange_date.mon) == (Time.now.mon-1)}
+    total.length
   end
 
 

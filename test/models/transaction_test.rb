@@ -10,7 +10,7 @@ class TransactionTest < ActiveSupport::TestCase
   end
 
   test "total transactions" do
-    assert_equal 2, Transaction.total_transactions
+    assert_equal 3, Transaction.total_transactions
   end
 
   test "amount spent in current month" do
@@ -18,6 +18,10 @@ class TransactionTest < ActiveSupport::TestCase
   end
 
   test "total transactions for the month" do
-    assert_equal 2, Transaction.transactions_for_month    
+    assert_equal 2, Transaction.transactions_for_month
+  end
+
+  test "total transactions for prior month" do
+    assert_equal 1, Transaction.transactions_last_month
   end
 end
