@@ -4,7 +4,7 @@ one:
   amount: 20.00
   exchange_date: 2016-03-02
   credit_or_debit: "debit"
-  paid_to: MyString
+  paid_to: The Bar
 
 two:
   amount: 10.00

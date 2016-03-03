@@ -52,4 +52,8 @@ class Transaction < ActiveRecord::Base
     all_expenses.max
   end
 
+  def self.place_most_spent
+    
+  end
+
 end

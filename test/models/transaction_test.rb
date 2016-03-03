@@ -32,4 +32,9 @@ class TransactionTest < ActiveSupport::TestCase
   test "biggest expense ever" do
     assert_equal 20, Transaction.biggest_expense_ever
   end
+
+  test "place most money was spent" do
+    assert_equal "The Bar", Transaction.place_most_spent
+  end
+
 end
