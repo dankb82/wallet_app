@@ -2,8 +2,8 @@
 
 <p>Your balance is: <%= number_to_currency(@balance) %></p>
 
-<p>You've made <%= @transaction_total %> transactions from this wallet.</p>
-
+<p>You've made <%= @transaction_total %> total transactions from this wallet.</p>
+<p>You've made <%= @month_transactions %> transactions this month.</p>
 <p> You've spent <%= number_to_currency(@current_month) %> this month.</p>
 
 <%= link_to "Transactions list", transactions_path %>

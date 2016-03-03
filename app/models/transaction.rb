@@ -15,12 +15,25 @@ class Transaction < ActiveRecord::Base
   end
 
   def self.current_month_spending
-     total_for_month = 0
-     self.all.each do |i|
-       if ((i.credit_or_debit == "debit") && (i.exchange_date.mon == Time.now.mon))
-         total_for_month += i.amount
-       end
-     end
-     total_for_month
-   end
+    total_for_month = 0
+    self.all.each do |i|
+      if ((i.credit_or_debit == "debit") && (i.exchange_date.mon == Time.now.mon))
+        total_for_month += i.amount
+      end
+    end
+    total_for_month
+  end
+
+  def self.transactions_for_month
+    transactions = []
+    self.all.each do |i|
+      if i.exchange_date.mon == Time.now.mon
+        transactions << i
+      end
+    end
+    transactions.count
+  end
+
+
+
 end

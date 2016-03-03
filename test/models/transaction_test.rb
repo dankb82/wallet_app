@@ -15,6 +15,9 @@ class TransactionTest < ActiveSupport::TestCase
 
   test "amount spent in current month" do
     assert_equal 20.00, Transaction.current_month_spending
+  end
 
+  test "total transactions for the month" do
+    assert_equal 2, Transaction.transactions_for_month    
   end
 end
