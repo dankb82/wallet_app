@@ -28,4 +28,8 @@ class TransactionTest < ActiveSupport::TestCase
   test "biggest expense this month" do
     assert_equal 20, Transaction.biggest_expense_current
   end
+
+  test "biggest expense ever" do
+    assert_equal 20, Transaction.biggest_expense_ever
+  end
 end

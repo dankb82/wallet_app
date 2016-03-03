@@ -7,6 +7,7 @@
 <p>You made <%= @last_month_transactions %> transactions last month.</p>
 <p> You've spent <%= number_to_currency(@current_month) %> this month.</p>
 <p>You're biggest expense this month was <%= number_to_currency(@biggest_current) %></p>
+<p>You're biggest expense ever was <%= number_to_currency(@biggest_expense) %></p>
 
 <%= link_to "Transactions list", transactions_path %>
 
