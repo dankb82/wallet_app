@@ -6,7 +6,7 @@ class TransactionTest < ActiveSupport::TestCase
   end
 
   test "wallet balance" do
-    assert_equal -20.00, Transaction.balance
+    assert_equal -30.00, Transaction.balance
   end
 
   test "total transactions" do
@@ -14,7 +14,7 @@ class TransactionTest < ActiveSupport::TestCase
   end
 
   test "amount spent in current month" do
-    assert_equal 20.00, Transaction.current_month_spending
+    assert_equal 30.00, Transaction.current_month_spending
   end
 
   test "total transactions for the month" do
@@ -23,5 +23,9 @@ class TransactionTest < ActiveSupport::TestCase
 
   test "total transactions for prior month" do
     assert_equal 1, Transaction.transactions_last_month
+  end
+
+  test "biggest expense this month" do
+    assert_equal 20, Transaction.biggest_expense_current
   end
 end

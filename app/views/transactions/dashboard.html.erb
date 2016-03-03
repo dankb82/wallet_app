@@ -4,8 +4,9 @@
 
 <p>You've made <%= @transaction_total %> total transactions from this wallet.</p>
 <p>You've made <%= @month_transactions %> transactions this month.</p>
-<p>You made <%= @last_month_transactions %> last month.</p>
+<p>You made <%= @last_month_transactions %> transactions last month.</p>
 <p> You've spent <%= number_to_currency(@current_month) %> this month.</p>
+<p>You're biggest expense this month was <%= number_to_currency(@biggest_current) %></p>
 
 <%= link_to "Transactions list", transactions_path %>
 

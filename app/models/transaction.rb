@@ -34,6 +34,16 @@ class Transaction < ActiveRecord::Base
     total.length
   end
 
+  def self.biggest_expense_current
+    expenses = []
+    self.all.each do |i|
+      if ((i.credit_or_debit == "debit") && (i.exchange_date.mon == Time.now.mon))
+        expenses << i.amount
+      end
+    end
+    expenses.max
+  end
+
 
 
 end
