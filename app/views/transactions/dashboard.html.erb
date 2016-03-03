@@ -4,4 +4,6 @@
 
 <p>You've made <%= @transaction_total %> transactions from this wallet.</p>
 
-<a href="http://localhost:3000/transactions/">list of transactions</a>
+<%= link_to "Transactions list", transactions_path %>
+
+<%= link_to 'New Transaction', new_transaction_path %>
