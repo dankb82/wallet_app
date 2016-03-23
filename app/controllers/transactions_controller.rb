@@ -12,7 +12,8 @@ class TransactionsController < ApplicationController
     @last_month_transactions = Transaction.transactions_last_month
     @biggest_current = Transaction.biggest_expense_current
     @biggest_expense = Transaction.biggest_expense_ever
-    # @most_spent = Transaction.place_most_spent
+    @balance_status = Transaction.account_status
+    @most_spent = Transaction.place_most_spent
   end
 
   def index

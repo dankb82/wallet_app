@@ -53,7 +53,15 @@ class Transaction < ActiveRecord::Base
   end
 
   # def self.place_most_spent
-  #   most_spent = Transactions.where(credit_or_debit: "debit").group(:paid_to).order('sum_amount DESC').sum(:amount).first
+  #   place_most = Transaction.all.where(credit_or_debit: "debit").group(:paid_to).order('sum_amount DESC').sum(:amount).first
   # end
+
+  # def self.account_status
+  #  if self.balance > 0.0
+  #    p "Your account is in good standing."
+  #  else
+  #    p "YOU DON'T HAVE ANY MONEY!!!"
+  #  end
+ end
 
 end
